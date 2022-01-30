@@ -11,19 +11,19 @@
 //  persistence(4) === 0 // because 4 is already a one-digit number
 
 const persistent_bugger = num => {
-	if (num < 10) return 0;
-	let result = 1;
-	let newNum = (num + "").split("").reduce((a, b) => +a * +b);
-	
-	while (newNum > 9) {
-		newNum = (newNum + "").split("").reduce((a, b) => +a * +b);
-		result++
-	}
+  if (num < 10) return 0;
+  let result = 1;
+  let newNum = (num + "").split("").reduce((a, b) => +a * +b);
+
+  while (newNum > 9) {
+    newNum = (newNum + "").split("").reduce((a, b) => +a * +b);
+    result++;
+  }
 
   return result;
 };
 
-console.log(persistent_bugger(4))
+console.log(persistent_bugger(4));
 
 //best solution
 
