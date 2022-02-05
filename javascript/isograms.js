@@ -22,3 +22,7 @@ function isIsogram(str) {
 }
 
 console.log(isIsogram("isIsogram"));
+
+// function isIsogram(str) {
+//   return !/(\w).*\1/i.test(str);
+// }
