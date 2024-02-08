@@ -17,9 +17,6 @@
 
 // Attention: If the number has leading zeros the amount of digits should be considered.
 
-
-
-
 const incrementString = (str) => {
   let wholeNumber = "";
   let counter = 0;
@@ -47,7 +44,7 @@ const incrementString = (str) => {
   }
   leadingZeros = leadingZeros.join("");
 
-  const incrementedValue = +wholeNumber + 1
+  const incrementedValue = +wholeNumber + 1;
 
   const incrementedValueStr = wholeNumber.length - (leadingZeros.length || -1);
 
@@ -56,7 +53,6 @@ const incrementString = (str) => {
   const sliced = (leadingZeros + incrementedValue).slice(
     -1 * (leadingZeros.length + incrementedValueStr)
   );
-
 
   return letters + sliced;
 };
