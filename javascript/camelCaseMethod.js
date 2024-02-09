@@ -5,8 +5,7 @@
 // "camel case word" --> "CamelCaseWord"
 
 String.prototype.camelCase = function () {
-  return this.toString()
-    .split(" ")
+  return this.split(" ")
     .map((item) => item.charAt(0).toUpperCase().concat(item.slice(1)))
     .join("");
 };
