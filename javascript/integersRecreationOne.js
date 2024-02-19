@@ -40,4 +40,4 @@ const getDivisors = (n) => {
   }
 
   return divisors.concat([n]);
-}
+};
