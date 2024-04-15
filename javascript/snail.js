@@ -19,16 +19,18 @@
 // NOTE 2: The 0x0 (empty matrix) is represented as en empty array inside an array [[]].
 
 const snail = (array) => {
-    let result = []
-  for(let i = 0; i < array.length; i++) {
-    for(let j = 0; j < array[0].length; j++) {
-        if(i % array.length === 0) {
-            result.push(array[i][j])
-        } else if (i % array.length === 1) {
-            result.push(array[i][array[0].length])
-        } else if (i % array.length === 2)
+  const flatten = array.flat()
+  const levels = array.length
+  let result = []
+
+  for(let i = 0; i < flatten.length; i++) {
+    if(i < levels) {
+      result.push(flatten[i])
     }
+    if(i )
   }
+
+  return result
 };
 
 console.log(
