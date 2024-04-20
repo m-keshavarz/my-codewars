@@ -72,8 +72,3 @@ function SeriesSum(n) {
 }
 
 console.log(SeriesSum(5));
-
-const numbers = [1, 2, 3, 4, 5]
-console.log(numbers.splice(numbers.indexOf(Math.min(...numbers)), 1)
-)
-console.log(Math.min(...numbers))
