@@ -13,25 +13,19 @@
 // snail(array) #=> [1,2,3,4,5,6,7,8,9]
 // This image will illustrate things more clearly:
 
-
 // NOTE: The idea is not sort the elements from the lowest value to the highest; the idea is to traverse the 2-d array in a clockwise snailshell pattern.
 
 // NOTE 2: The 0x0 (empty matrix) is represented as en empty array inside an array [[]].
 
-const snail = (array) => {
-  const flatten = array.flat()
-  const levels = array.length
-  let result = []
-
-  for(let i = 0; i < flatten.length; i++) {
-    if(i < levels) {
-      result.push(flatten[i])
-    }
-    if(i )
+function snail(array) {
+  var vector = [];
+  while (array.length) {
+    vector.push(...array.shift());
+    array.map((row) => vector.push(row.pop()));
+    array.reverse().map((row) => row.reverse());
   }
-
-  return result
-};
+  return vector;
+}
 
 console.log(
   snail([
